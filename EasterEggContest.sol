@@ -17,7 +17,7 @@ contract EasterEggContest {
 
     string private constant MysteryKey = *CENSORED*;
 
-    function message(address _user, string calldata _inputData) public
+    function message(address discord_user, string calldata _discord_inputData) public
     {
         if (_inputData == "HINTS") {
             revert("HINT: *CENSORED*");
