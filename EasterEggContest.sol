@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.17;
 
-contract EasterEggContest {
+contract DiscordEasterEggContest {
     string public constant easterEggReward =  "City Pass Whitelist spot";
     uint256 public constant easterEggWhitelistSpotMaxAllocation = 200;
 
