@@ -10,10 +10,10 @@ contract EasterEggContest {
 
     mapping(address => bool) public mysteryRole;
 
-    string private constant MasterKey1 = *CENSORED*;
-    string private constant MasterKey2 = *CENSORED*;
-    string private constant MasterKey3 = *CENSORED*;
-    string private constant MasterKey4 = *CENSORED*;
+    string private constant Key1 = *CENSORED*;
+    string private constant Key2 = *CENSORED*;
+    string private constant Key3 = *CENSORED*;
+    string private constant Key4 = *CENSORED*;
 
     string private constant MysteryKey = *CENSORED*;
 
@@ -21,7 +21,7 @@ contract EasterEggContest {
     {
         if (_inputData == "HINTS") {
             revert("HINT: *CENSORED*");
-        } else if (_inputData == string.concat((MasterKey1, MasterKey2, MasterKey3, MasterKey4)) {
+        } else if (_inputData == string.concat((Key1, Key2, Key3, Key4)) {
             if (whitelistedCounter < easterEggWhitelistSpotMaxAllocation) {
                 whitelist[_user] = true;
                 whitelistedCounter++;
