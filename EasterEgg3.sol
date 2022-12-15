@@ -36,5 +36,7 @@ contract EasterEggContest {
             revert("This is not the correct key.");
         }
     }
+    
+    ## Good luck
    
 }
