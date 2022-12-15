@@ -28,7 +28,7 @@ contract EasterEggContest {
                 whitelist[_user] = true;
                 whitelistedCounter++;
             } else {
-                revert("Max allocation reached");
+                revert("The whitelist maximum allocation has been reached");
             }
         } else if (_inputData == MysteryKey) {
             mysteryRole[_user] = true;
