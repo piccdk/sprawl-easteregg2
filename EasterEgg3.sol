@@ -12,29 +12,14 @@ contract EasterEggContest {
 
     mapping(address => bool) public mysteryRole;
 
-    string[4] private constant Keys = ["*CENSORED*", "*CENSORED*", "*CENSORED*", "*CENSORED*"];
+    string private constant Key1 = *CENSORED*;
+    string private constant Key2 = *CENSORED*;
+    string private constant Key3 = *CENSORED*;
+    string private constant Key4 = *CENSORED*;
 
     bytes32 private constant MysteryKey = keccak256("sprawl");
 
-    function message(address _discordUser, string calldata _discordInputData) public
-    {
-        if (StringUtils.equal(_discordInputData, "HINTS")) {
-            revert("HINT: *CENSORED*");
-        } else if (isMasterKey(_discordInputData)) {
-            if (whitelistedCounter < easterEggWhitelistSpotMaxAllocation) {
-                whitelist[_discordUser] = true;
-                whitelistedCounter++;
-            } else {
-                revert("The whitelist maximum allocation has been reached");
-            }
-        } else if (keccak256(_discordInputData) == MysteryKey) {
-            mysteryRole[_discordUser] = true;
-        } else {
-            revert("This is not the correct key.");
-        }
-    }
-
-    function message(address discord_user, string calldata _discord_inputData) public
+        function message(address discord_user, string calldata _discord_inputData) public
     {
         if (_inputData == "HINTS") {
             revert("HINT: *CENSORED*");
