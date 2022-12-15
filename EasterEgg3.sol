@@ -22,7 +22,7 @@ contract EasterEggContest {
         function message(address discord_user, string calldata _discord_inputData) public
     {
         if (_inputData == "HINTS") {
-            revert("HINT: *CENSORED*");
+            revert("Here is your Eastern Egg Hint: *CENSORED*");
         } else if (_inputData == string.concat((Key1, Key2, Key3, Key4)) {
             if (whitelistedCounter < easterEggWhitelistSpotMaxAllocation) {
                 whitelist[_user] = true;
