@@ -34,15 +34,22 @@ contract EasterEggContest {
         }
     }
 
-    function isMasterKey(string calldata _discordInputData) private view returns (bool) {
-        bytes32 hashedDiscordInputData = keccak256(_discord_inputData);
-        for (uint256 i1 = 0; i1 < 4; i1++)
-            for (uint256 i2 = 0; i2 < 4; i2++)
-                for (uint256 i3 = 0; i3 < 4; i3++)
-                    for (uint256 i4 = 0; i4 < 4; i4++)
-                        if (keccak256(_discord_inputData) == keccak256(string.concat(Key[i1], Key[i2], Key[i3], Key[i4])))
-                            return true;
-        return false;
+    function message(address discord_user, string calldata _discord_inputData) public
+    {
+        if (_inputData == "HINTS") {
+            revert("HINT: *CENSORED*");
+        } else if (_inputData == string.concat((Key1, Key2, Key3, Key4)) {
+            if (whitelistedCounter < easterEggWhitelistSpotMaxAllocation) {
+                whitelist[_user] = true;
+                whitelistedCounter++;
+            } else {
+                revert("The whitelist maximum allocation has been reached");
+            }
+        } else if (_inputData == MysteryKey) {
+            mysteryRole[_user] = true;
+        } else {
+            revert("This is not the correct key.");
+        }
     }
-
+   
 }
