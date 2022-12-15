@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.17;
 
-contract DiscordEasterEggContest {
+contract EasterEggContest {
+    string public constant easterEggLocation =  "Discord";
+    string public constant easterEggActor =  "Easter Egg Bot";
     string public constant easterEggReward =  "City Pass Whitelist spot";
     uint256 public constant easterEggWhitelistSpotMaxAllocation = 200;
 
@@ -15,7 +17,7 @@ contract DiscordEasterEggContest {
     string private constant Key3 = *CENSORED*;
     string private constant Key4 = *CENSORED*;
 
-    string private constant MysteryKey = *CENSORED*;
+    string private constant MysteryKey = keccak256(sprawl);
 
     function message(address discord_user, string calldata _discord_inputData) public
     {
@@ -31,7 +33,7 @@ contract DiscordEasterEggContest {
         } else if (_inputData == MysteryKey) {
             mysteryRole[_user] = true;
         } else {
-            revert("Wrong key");
+            revert("This is not the correct key.");
         }
     }
    
