@@ -17,9 +17,9 @@ contract EasterEggContest {
     string private constant Key3 = *CENSORED*;
     string private constant Key4 = *CENSORED*;
 
-    bytes32 private constant MysteryKey = keccak256("sprawl");
+    string private constant MysteryKey = string(abi.encode(keccak256("sprawl")));
 
-        function message(address discord_user, string calldata _discord_inputData) public
+    function message(address discord_user, string calldata _discord_inputData) public
     {
         if (_inputData == "I need hints") {
             revert("*CENSORED*");
@@ -36,7 +36,7 @@ contract EasterEggContest {
             revert("This is not the correct key.");
         }
     }
-    
+
     ## Good luck
-   
+
 }
