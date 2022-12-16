@@ -37,6 +37,6 @@ contract EasterEggContest {
         }
     }
 
-    ## Good luck
+    // Good luck
 
 }
