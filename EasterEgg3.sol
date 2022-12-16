@@ -17,7 +17,7 @@ contract EasterEggContest {
     string private constant Key3 = *CENSORED*;
     string private constant Key4 = *CENSORED*;
 
-    string private constant MysteryKey = string(abi.encode(keccak256("sprawl")));
+    string private constant MysteryKey =  string(keccak256("sprawl"));
 
     function message(address discord_user, string calldata _discord_inputData) public
     {
